@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>감정일기</title>
+  </head>
+  <body>
+    <a class="logo" href="./">기억:ON°</a>
+    <div class="screen">
+      <div class="header">
+        <h1 class="title">감정일기</h1>
+        <!-- <nav class="navbar">
+          <button class="nav-item">홈</button>
+          <button class="nav-item">오늘의 질문</button>
+          <button class="nav-item">추억</button>
+          <button class="nav-item">달력</button>
+        </nav> -->
+      </div>
+
+      <div id="currentDate" class="current-date"></div>
+
+      <!-- 질문 섹션 -->
+      <section id="questionSection" class="question-section">
+        <h2 id="questionNumber" class="question-number"></h2>
+        <p id="questionText" class="question-text"></p>
+        <textarea id="answerText" class="answer-input" placeholder="답변을 입력하세요"></textarea>
+        <button id="saveButton" class="save-button">저장</button>
+        <div id="completedMessage" class="completed-message" style="display: none;">이미 완료하였습니다</div>
+        <div id="saveMessage" class="save-message"></div>
+      </section>
+
+      <!-- 추억 섹션 -->
+      <section id="memoriesSection" class="memories-section">
+        <div class="memories-header">
+          <h2>추억</h2>
+          <button id="sortButton" class="sort-button">🔽 내림차순</button>
+        </div>
+        <div id="memoriesList" class="memories-list"></div>
+        <div id="memoriesPagination" class="pagination"></div>
+      </section>
+
+      <!-- 달력 섹션 -->
+      <section id="calendarSection" class="calendar-section">
+        <div class="calendar-header">
+          <h2>달력</h2>
+        </div>
+        <div class="calendar-controls">
+          <button id="prevMonth">&lt;</button>
+          <input type="number" id="yearInput" min="2000" max="2100" />
+          <select id="monthInput">
+            <option value="0">1월</option>
+            <option value="1">2월</option>
+            <option value="2">3월</option>
+            <option value="3">4월</option>
+            <option value="4">5월</option>
+            <option value="5">6월</option>
+            <option value="6">7월</option>
+            <option value="7">8월</option>
+            <option value="8">9월</option>
+            <option value="9">10월</option>
+            <option value="10">11월</option>
+            <option value="11">12월</option>
+          </select>
+          <button id="nextMonth">&gt;</button>
+        </div>
+        <div id="calendarContainer" class="calendar-grid"></div>
+        <div id="calendarDetails" class="calendar-details" style="display: none;"></div>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
